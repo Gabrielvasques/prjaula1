@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+  <!-- scripts -->
+  <script src="components/loader.js"></script>
+  <script src="lib/jquery-3.6.0.min.js"></script>
+  <script src="components/acao.js"></script>
+
+ <!-- links -->
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script>
+    
+    }
+  </script>
+</head>
+<body>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 a">
+        <h2>CALCULADORA</h2>
+      </div>
+    </div><br><br>
+    <div class="row">
+      <div class="col-4 b">
+        <input type="double" name="valor1" id="n1"><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b">
+        <input type="double" name="valor2" id="n2"><br><br>
+      </div>  
+    </div>
+    <div class="row">
+      <div class="col-2 c">
+        <button type="button" class="btn btn-outline-primary" id="mais">+</button>
+      </div>
+      <div class="col-2 c">
+        <button type="button" class="btn btn-outline-primary" id="menos">-</button>
+      </div>
+      <div class="col-2 c">
+        <button type="button" class="btn btn-outline-primary" id="vezes">x</button>
+      </div>
+      <div class="col-2 c">
+        <button type="button" class="btn btn-outline-primary" id="dividir">/</button>
+      </div>
+      <div class="col-2 c">
+        <button type="button" class="btn btn-outline-primary" id="exponenciar">X²</button>
+      </div>
+    </div><br>
+     <div class="row">
+      <div class="col-4 b">
+        <input type="double" name="resultado" id="res"><br><br>
+      </div>  
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+	<script>	
+			$(document).on('click','#mais',function(){
+				var A =parseFloat($('#n1').val());
+				var B =parseFloat($('#n2').val());
+				$('#res').val(A+B);
+			});
+			$(document).on('click','#menos',function(){
+				var A =parseFloat($('#n1').val());
+				var B =parseFloat($('#n2').val());
+				$('#res').val(A-B);
+			});
+			$(document).on('click','#vezes',function(){
+				var A =parseFloat($('#n1').val());
+				var B =parseFloat($('#n2').val());
+				$('#res').val(A*B);
+			});
+			$(document).on('click','#dividir',function(){
+				var A =parseFloat($('#n1').val());
+				var B =parseFloat($('#n2').val());
+				$('#res').val(A/B);
+			});
+      $(document).on('click','#exponenciar',function(){
+				var A =parseFloat($('#n1').val());
+        var B =parseFloat($('#n2').val());
+        $('#res').val();
+        
+			});
+	</script>
+
+</body>
+</html>
